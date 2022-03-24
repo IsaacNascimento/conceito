@@ -17,7 +17,8 @@ function App() {
 
       <Menu/>
 
-      <Cartao tittle="É o trikas" image="https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg"/>
+      <Cartao tittle="É o trikas" image="https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg" text="Some quick example text to build on the card title and make up the
+            bulk of the card's content."/>
 
       <br>
       </br>
