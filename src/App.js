@@ -1,31 +1,56 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import { Button, Card, Container, Nav, Navbar, Row, Col } from "react-bootstrap";
+import {
+  Button,
+  Card,
+  Container,
+  Nav,
+  Navbar,
+  Row,
+  Col,
+  ButtonGroup,
+} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Menu from "./components/Menu";
-import Cartao from "./components/Cartao";
 
+import Pagina from "./pages/pag";
+import { Box } from "./components/Box";
 
+import { Carros } from "./pages/Carros";
+import { Objeto } from "./pages/Objeto";
+import { Array } from "./pages/Array";
+import {Pagina1} from "./pages/Pagina1";
+import {Contador} from "./pages/Contador";
 
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { FilmesPopulares } from "./filmes/FilmesPopulares";
+import {FilmesDetalhes} from "./filmes/FilmesDetalhes";
+import { FilmesLancamentos } from "./filmes/FilmesLancamentos";
+import { FilmesNowPlaying } from "./filmes/FilmesNowPlaying";
 
 
 function App() {
   return (
     <body>
+      
+    
+      <BrowserRouter>
+       <Menu/>
+        <Routes>
+          {/* <Route path="/" element={<Pagina1/>} />
+          <Route path="/carros" element={<Carros/>} />
+          <Route path="/array" element={<Array/>} />
+          <Route path="/objeto" element={<Objeto/>} />
+          <Route path="/contador" element={<Contador/>} />       */}
+          <Route path="/" element={<FilmesPopulares/>} />
+          <Route path="/filmes/lancamentos" element={<FilmesLancamentos/>} />
+          <Route path="/filmes/now_playing" element={<FilmesNowPlaying/>} />
+          <Route path="/filmes/:id" element={<FilmesDetalhes/>} />
+        </Routes>
+      </BrowserRouter>
 
-      <Menu/>
-
-      <Cartao tittle="É o trikas" image="https://img.freepik.com/fotos-gratis/imagem-aproximada-em-tons-de-cinza-de-uma-aguia-careca-americana-em-um-fundo-escuro_181624-31795.jpg" text="Some quick example text to build on the card title and make up the
-            bulk of the card's content."/>
-
-      <br>
-      </br>
-
-      <h1>Hello World</h1>
-     
-      <Button variant="primary">Primary</Button>
     </body>
   );
 }
