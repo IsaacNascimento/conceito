@@ -1,11 +1,10 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar, Dropdown } from "react-bootstrap";
 
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 const Menu = () => {
   return (
-    <div >
-     
+    <div>
       <Navbar bg="dark" variant="dark" className="mb-5">
         <Container>
           <Navbar.Brand href="/">Filmes Populares</Navbar.Brand>
@@ -15,9 +14,28 @@ const Menu = () => {
             <Link className="nav-link" to='/objeto'>Objetos</Link>
             <Link className="nav-link" to='/contador'>Contador</Link> */}
             {/* <Link className="nav-link" to='/'>Filmes populares</Link> */}
-            <Link className="nav-link" to='/filmes/lancamentos'>Filmes lançamentos</Link>
-            <Link className="nav-link" to='/filmes/now_playing'>Filmes em Cartaz</Link>
-            
+
+        
+
+            <Dropdown>
+              <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                Filmes
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item >
+                  <Link className="nav-link text-dark" to="/filmes/lancamentos">
+                    Filmes lançamentos
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link className="nav-link text-dark" to="/filmes/now_playing">
+                    Filmes em Cartaz
+                  </Link>
+                </Dropdown.Item>
+
+              </Dropdown.Menu>
+            </Dropdown>
           </Nav>
         </Container>
       </Navbar>

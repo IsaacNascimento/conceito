@@ -24,14 +24,14 @@ export const FilmesNowPlaying = () => {
               <Card>
                 <Card.Img
                   variant="top"
-                  src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path}
+                  src={"https://image.tmdb.org/t/p/w500" + item.poster_path}
                 />
                 <Card.Body>
                   <Card.Title>{item.title} </Card.Title>
 
                   <Link
                     style={{ marginTop: "15px" }}
-                    className="btn btn-danger"
+                    className="btn btn-dark lg"
                     to={"/filmes/" + item.id}
                   >
                     Ver detalhes

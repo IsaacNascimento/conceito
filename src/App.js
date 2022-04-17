@@ -29,6 +29,7 @@ import { FilmesPopulares } from "./filmes/FilmesPopulares";
 import {FilmesDetalhes} from "./filmes/FilmesDetalhes";
 import { FilmesLancamentos } from "./filmes/FilmesLancamentos";
 import { FilmesNowPlaying } from "./filmes/FilmesNowPlaying";
+import { FilmesElencos } from "./filmes/FilmesElencos";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/" element={<FilmesPopulares/>} />
           <Route path="/filmes/lancamentos" element={<FilmesLancamentos/>} />
           <Route path="/filmes/now_playing" element={<FilmesNowPlaying/>} />
+          <Route path="/filmes/elenco/:id" element={<FilmesElencos/>}/>
           <Route path="/filmes/:id" element={<FilmesDetalhes/>} />
         </Routes>
       </BrowserRouter>

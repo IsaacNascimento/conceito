@@ -21,11 +21,17 @@ export const FilmesPopulares = () => {
       <Container>
         <h1>filmes Populares</h1>
 
+        {filmes.id && <h1>LOADING</h1>}
+       
+        {!filmes.id &&
+         <>
+        
+
         <Row>
           {filmes.map((item) => (
-            <Col md={3} className="mb-3">
+            <Col key={item.id} md={3} className="mb-3">
              
-              <Card style={{ heigh: "18rem", width: "18rem" }}>
+              <Card style={{ heigh: "18rem", width: "18rem"}}>
                 <Card.Img variant="top" src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path}/>
                 <Card.Body>
                   <Card.Title>{item.title} </Card.Title>
@@ -38,7 +44,7 @@ export const FilmesPopulares = () => {
                   ({item.popularity})
                   </Card.Text>
 
-                  <Link className="btn btn-danger" to={'/filmes/' + item.id}>Ver detalhes</Link>
+                  <Link className="btn btn-dark" to={'/filmes/' + item.id}>Ver detalhes</Link>
 
                   
                 </Card.Body>
@@ -46,8 +52,8 @@ export const FilmesPopulares = () => {
             </Col>
           ))}
         </Row>
-
-
+         </>
+          }
       </Container>
     </body>
   );

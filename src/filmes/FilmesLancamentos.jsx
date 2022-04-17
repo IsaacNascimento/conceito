@@ -30,8 +30,8 @@ export const FilmesLancamentos = () => {
                   <Card.Title>{item.title} </Card.Title>
 
                   <Link
-                    style={{ marginTop: "15px" }}
-                    className="btn btn-danger"
+                  style={{ marginTop: "15px" }}
+                    className="btn btn-dark"
                     to={"/filmes/" + item.id}
                   >
                     Ver detalhes
