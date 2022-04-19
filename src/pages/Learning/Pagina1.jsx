@@ -1,10 +1,10 @@
 import React from "react";
 
-import Menu from "../components/Menu";
+import Menu from "../../components/Menu";
 
 import { Button, Container } from "react-bootstrap";
 
-import { Box } from "../components/Box";
+import { Box } from "../../components/Box";
 
 import Pagina from "./pag";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
-import { Box } from "../components/Box";
+import { Box } from "../../components/Box";
 import Pagina from "./pag";
 
 export const Array = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import ApiFilmes from "../ApiFilmes";
+import ApiFilmes from "../../services/ApiFilmes";
 
 import { Link, useNavigate } from "react-router-dom";
 
@@ -80,25 +80,27 @@ export const FilmesDetalhes = () => {
                 </Link>
               </Col>
             </Row>
-            <h1>
-              <strong>Cast</strong>
+            <h1 className="mb-6">
+              <strong>Elenco</strong>
             </h1>
 
             <Row>
               {elenco.map((item) => (
                 <Col md={2} className="mb-2">
                   <Card>
+                  <Link to={'/filmes/elenco/' + item.id}>
                     <Card.Img
                       variant="top"
                       src={
                         "https://image.tmdb.org/t/p/w500" + item.profile_path
                       }
                     />
-                    <Card.Body>
+                    </Link>
+                    {/* <Card.Body>
                       <Card.Title>{item.name} </Card.Title>
                       <Card.Text>{item.character}</Card.Text>
                       <Link className="btn btn-dark" to={'/filmes/elenco/' + item.id}>Ver detalhes</Link>
-                    </Card.Body>
+                    </Card.Body> */}
                   </Card>
                 </Col>
               ))}

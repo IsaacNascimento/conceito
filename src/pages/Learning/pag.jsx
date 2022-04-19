@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button } from 'react-bootstrap'
 
-import Cartao from '../components/Cartao'
+import Cartao from '../../components/Cartao'
 
 const Pagina = () => {
   return (

@@ -36,6 +36,34 @@ const Menu = () => {
 
               </Dropdown.Menu>
             </Dropdown>
+
+
+            <Dropdown>
+              <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                Series de Tv
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item >
+                  <Link className="nav-link text-dark" to="/series">
+                    Series Populares
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item >
+                  <Link className="nav-link text-dark" to="/series/no_ar">
+                    Series no Ar
+                  </Link>
+                </Dropdown.Item>
+                <Dropdown.Item >
+                  <Link className="nav-link text-dark" to="/series/estrelando">
+                    Series Estrelando Hoje
+                  </Link>
+                </Dropdown.Item>
+
+              </Dropdown.Menu>
+            </Dropdown>
+
+
           </Nav>
         </Container>
       </Navbar>

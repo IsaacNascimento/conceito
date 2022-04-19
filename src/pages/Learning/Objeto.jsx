@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import { Box } from "../components/Box";
+import { Box } from "../../components/Box";
 
 import Pagina from "./pag";
 

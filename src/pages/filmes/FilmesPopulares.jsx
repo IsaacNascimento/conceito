@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Carousel, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ApiFilmes  from "../ApiFilmes";
+import ApiFilmes  from "../../services/ApiFilmes";
 
 export const FilmesPopulares = () => {
   const [filmes, setfilmes] = useState([]);
