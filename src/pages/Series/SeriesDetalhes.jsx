@@ -17,9 +17,9 @@ export const SeriesDetalhes = () => {
       console.log(resultado.data);
       setSerie(resultado.data);
     });
-    ApiFilmes.get("/tv/" + params.id + "/season/" + params.id +  "/images?language=pt-BR").then((resultado) => {
-      console.log(resultado.data);
-      setTemporadas(resultado.data);
+    ApiFilmes.get("/tv/" + params.id + "?language=pt-BR").then((resultado) => {
+      console.log(resultado.data.seasons);
+      setTemporadas(resultado.data.seasons);
     });
     ApiFilmes.get("/tv/" + params.id + "/credits?language=pt-BR").then(
       (resultado) => {
@@ -80,7 +80,7 @@ export const SeriesDetalhes = () => {
                 <Link to={"/filmes/elenco/" + item.id}>
                   <Card.Img
                     variant="top"
-                    src={"https://image.tmdb.org/t/p/w500" + item.file_path}
+                    src={"https://image.tmdb.org/t/p/w500" + item.poster_path}
                   />
                 </Link>
               </Card>
